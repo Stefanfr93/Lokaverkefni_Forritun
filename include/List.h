@@ -1,6 +1,6 @@
 //
 //  List.h
-//  Lokaverkefni
+//  Lokaverkefni C++ 2018
 //
 //  Created by Stef‡n Freyr Sm‡rason
 //  Copyright © 2018 Stef‡n Freyr Sm‡rason. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  Lokaverkefni
+//  Lokaverkefni C++ 2018
 //
 //  Created by Stefán Freyr Smárason
 //  Copyright © 2018 Stefán Freyr Smárason. All rights reserved.
