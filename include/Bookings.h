@@ -11,7 +11,7 @@
 #include "Booking.h"
 
 
-struct Bookings
+class Bookings
 {
     public:
         Bookings(): next(NULL){}
