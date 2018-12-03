@@ -17,15 +17,17 @@
 class List
 {
     public:
-        List() {
+        List() // Constructor
+        {
         head = NULL;
         }
-        virtual ~List()
+    
+        virtual ~List() // Destructor
         {
             clear();
         }
 
-        void clear()//Hreinsar allan tengda listann.
+        void clear() // clears the linked list.
         {
             Bookings *temp = head;
             while(head != NULL)
@@ -35,7 +37,8 @@ class List
                 temp = head;
             }
         }
-        void add(Booking *Book)//B¾ti b—kun vid listann
+    
+        void add(Booking *Book) // B¾ti b—kun vid listann
         {
             Bookings *temp = new Bookings;
             temp->data = Book;
@@ -51,7 +54,8 @@ class List
                 tail = tail->next;
             }
         }
-        void add(FlightBookings *Book)//B¾ti b—kun vid listann
+    
+        void add(FlightBookings *Book) // B¾ti b—kun vid listann
         {
             Bookings *temp = new Bookings;
             temp->data = Book;

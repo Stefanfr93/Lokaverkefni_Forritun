@@ -15,7 +15,18 @@ using namespace std;
 class Booking // Upprunulegi klasinn sem hinir erfa fr‡
 {
     public:
+        int days[12] = {31,28,31,30,31,30,31,31,30,31,30,31}; // Daga fjšldi ’ hverjum m‡nudi fyrir sig
+        string BookingNr;
+        int BookingDay;
+        int BookingMonth;
+        string Name;
+        int Price;
+        string DepartureStation;
+        string ArrivalStation;
+        string Duration;
+    
         Booking(): BookingNr(""), BookingDay(NULL), BookingMonth(NULL), Name(""),Price(NULL),DepartureStation(""),ArrivalStation(""),Duration(""){}//Constructor
+    
         void Inputs()//Tekur inn gšgn sem notandinn skrifar inn.
         {
             cout << "Booking Number: ";
@@ -54,18 +65,7 @@ class Booking // Upprunulegi klasinn sem hinir erfa fr‡
                 Day();
             }
         }
-        virtual void print() const = 0;//Prentar œt allar upplysingarnar sem eru ’ b—kuninni.
-
-        int days[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
-        string BookingNr;
-        int BookingDay;
-        int BookingMonth;
-        string Name;
-        int Price;
-        string DepartureStation;
-        string ArrivalStation;
-        string Duration;
-
+        virtual void print() const = 0;// Prentar œt allar upplysingarnar sem eru ’ b—kuninni.
 
     protected:
 

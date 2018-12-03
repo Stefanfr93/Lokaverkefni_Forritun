@@ -16,14 +16,15 @@ using namespace std;
 
 int main()
 {
-    List listinn;
-    bool KeepRunning = true;
-    int action = 0;
-    char answer;
+    List listinn; // Listi sem heldur utan um bókanir
+    bool KeepRunning = true; // Heldur utan um hvort notandinn vilji gera eitthvað fleira
+    int action = 0; // Heldur utan um hvaða aðgerð notandinn vill gera
+    char answer; // Notast með KeepRunning bool
     bool ActionType = false;
-    while(KeepRunning)
+    
+    while(KeepRunning) //á meðan að notandinn hefur aðgerðir til að framkvæma
     {
-        while(!ActionType)
+        while(!ActionType) //Á meðan að ActionType er false, keyri valmynd
         {
             cout << "What would you like to do" << endl << "1. View Bookings" << endl << "2. Add Bookings" << endl;// Spyr notandann hvort hann vilji bæta við eða skoða bókanirnar.
             cin >> action;
@@ -36,10 +37,11 @@ int main()
                 cout << "incorrect Choice!" << endl;
             }
         }
-        if(action == 2)
+        if(action == 2) // Gera nýja bókun
         {
-            int Type = 0; // breaks?
+            int Type = 0;
             bool TypeTrue = false;
+            
             while(!TypeTrue)
             {
                 cout << "What type of booking would you like to book? Please pick 1.Bus, 2.Flight, 3.Boat" << endl; // Spyr notandann um hvernig týpu af bókun þetta mun vera.
@@ -55,9 +57,9 @@ int main()
             }
             if(Type == 1)// Bus
             {
-                BusBooking *busBooking = new BusBooking;
-                busBooking->BusInput();
-                listinn.add(busBooking);
+                BusBooking *busBooking = new BusBooking; // Bý til busBooking obj
+                busBooking->BusInput(); // kalla í inputs sem les inn gildi frá notenda
+                listinn.add(busBooking); // Bæti við í listann
             }
             else if(Type == 2) // Flight
             {
