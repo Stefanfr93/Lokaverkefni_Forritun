@@ -15,8 +15,8 @@ class Bookings
 {
     public:
         Bookings(): next(NULL){}
-        Booking *data;
-        Bookings *next;
+        Booking *data; // gögn í núverandi nóðu í listanum
+        Bookings *next; // Næsta nóðan í listanum sem þessi nóða bendir á
 
     protected:
 
